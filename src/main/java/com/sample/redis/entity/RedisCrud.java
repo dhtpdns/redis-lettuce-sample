@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.redis.core.index.Indexed;
 
 import java.time.LocalDateTime;
 
@@ -15,6 +16,7 @@ public class RedisCrud {
 
     @Id
     private Long id;
+    @Indexed
     private String description;
     private LocalDateTime updatedAt;
 
